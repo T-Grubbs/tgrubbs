@@ -53,6 +53,23 @@ app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 // default value for title local
 app.locals.title = 'Express - Generated with IronGenerator';
 
+app.use(session({
+  secret:"some secret goes here",
+  resave: true,
+  saveUninitialized: true
+}));
+
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+//Here is where you place the address of the client sides
+app.use(cors({
+  credentials: true,
+  origin: ['http://localhost:3000',]
+}));
+
+
 
 
 const index = require('./routes/index');
