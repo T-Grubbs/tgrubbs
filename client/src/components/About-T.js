@@ -1,20 +1,18 @@
 import React, { Component } from 'react';
 import './App.css';
 
-class Resume extends Component {
-
+class AboutT extends Component {
 
     render(){
 
         return(
 
             <div>
-                Resume goes here
+                Stuff about me goes here
             </div>
 
         )
 
     }
-}
 
-export default Resume;
+}
